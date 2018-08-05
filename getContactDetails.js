@@ -14,7 +14,7 @@ function getData() {
     var phoneFinder = all_profile_data.match(/\b\d{3}-\d{3}-\d{4}\b|\b\d{3}\)-\d{3}-\d{4}\b|\b\d{3}\)\s*\d{3}-\d{4}\b|\b\d{3}\.\d{3}\.\d{4}\b/g);
     if (phoneFinder) {
       for (eml = 0; eml < phoneFinder.length; eml++) {
-        var remove_commercial = phoneFinder[eml].replace(/^800.*|^888.*|^1.*|^900.*|^877.*|^0.*/g, '');
+        var remove_commercial = phoneFinder[eml].replace(/^999.*|^833.*|^844.*|^855.*|^866.*|^800.*|^888.*|^1.*|^900.*|^877.*|^0.*/g, '');
         if (remove_commercial.length > 0) {
           phoneArr.push(remove_commercial);
         }
@@ -49,6 +49,9 @@ function getData() {
     createModElm.style.zIndex = "10000";
     createModElm.select();
     document.execCommand("copy");
+	document.body.removeChild(createModElm);
+	alert(data_output +" has been copied to your clipboard")
+	
   }, 60);
 }
 
