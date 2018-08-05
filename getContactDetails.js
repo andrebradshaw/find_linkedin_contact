@@ -50,7 +50,7 @@ function getData() {
     createModElm.select();
     document.execCommand("copy");
 	document.body.removeChild(createModElm);
-	alert(data_output +" has been copied to your clipboard")
+	alert(data_output +" has been copied to your clipboard");
 	
   }, 60);
 }
